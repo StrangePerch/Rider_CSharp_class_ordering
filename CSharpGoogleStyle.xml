@@ -1,0 +1,162 @@
+<TypePattern DisplayName="Class members">
+  <Entry DisplayName="Nested classes, enums, delegates and events">
+    <Entry.Match>
+      <Or>
+        <Kind Is="Class"/>
+        <Kind Is="Enum"/>
+        <Kind Is="Delegate"/>
+        <Kind Is="Event"/>
+      </Or>
+    </Entry.Match>
+    <Entry.SortBy>
+      <Kind>
+        <Kind.Order>
+          <DeclarationKind>Class</DeclarationKind>
+          <DeclarationKind>Enum</DeclarationKind>
+          <DeclarationKind>Delegate</DeclarationKind>
+          <DeclarationKind>Event</DeclarationKind>
+        </Kind.Order>
+      </Kind>
+      <Access>
+        <Access.Order>
+          <AccessModifier>Public</AccessModifier>
+          <AccessModifier>Internal</AccessModifier>
+          <AccessModifier>ProtectedInternal</AccessModifier>
+          <AccessModifier>Protected</AccessModifier>
+          <AccessModifier>Private</AccessModifier>
+        </Access.Order>
+      </Access>
+    </Entry.SortBy>
+  </Entry>
+
+  <Entry DisplayName="Static, const and readonly fields">
+    <Entry.Match>
+      <Or>
+        <Kind Is="Constant"/>
+        <And>
+          <Kind Is="Field"/>
+          <Or>
+            <Static/>
+            <Readonly/>
+          </Or>
+        </And>
+      </Or>
+    </Entry.Match>
+    <Entry.SortBy>
+      <Static/>
+      <Kind>
+        <Kind.Order>
+          <DeclarationKind>Constant</DeclarationKind>
+        </Kind.Order>
+      </Kind>
+      <Readonly/>
+      <Access>
+        <Access.Order>
+          <AccessModifier>Public</AccessModifier>
+          <AccessModifier>Internal</AccessModifier>
+          <AccessModifier>ProtectedInternal</AccessModifier>
+          <AccessModifier>Protected</AccessModifier>
+          <AccessModifier>Private</AccessModifier>
+        </Access.Order>
+      </Access>
+    </Entry.SortBy>
+  </Entry>
+
+  <Entry DisplayName="Fields">
+    <Entry.Match>
+      <And>
+        <Kind Is="Field"/>
+        <Not>
+          <Or>
+            <Static/>
+            <Readonly/>
+            <Kind Is="Constant" />
+          </Or>
+        </Not>
+      </And>
+    </Entry.Match>
+    <Entry.SortBy>
+      <Access>
+        <Access.Order>
+          <AccessModifier>Public</AccessModifier>
+          <AccessModifier>Internal</AccessModifier>
+          <AccessModifier>ProtectedInternal</AccessModifier>
+          <AccessModifier>Protected</AccessModifier>
+          <AccessModifier>Private</AccessModifier>
+        </Access.Order>
+      </Access>
+    </Entry.SortBy>
+  </Entry>
+
+  <Entry DisplayName="Properties">
+    <Entry.Match>
+      <Kind Is="Property"/>
+    </Entry.Match>
+    <Entry.SortBy>
+      <Static/>
+      <Kind>
+        <Kind.Order>
+          <DeclarationKind>Constant</DeclarationKind>
+        </Kind.Order>
+      </Kind>
+      <Readonly/>
+      <Access>
+        <Access.Order>
+          <AccessModifier>Public</AccessModifier>
+          <AccessModifier>Internal</AccessModifier>
+          <AccessModifier>ProtectedInternal</AccessModifier>
+          <AccessModifier>Protected</AccessModifier>
+          <AccessModifier>Private</AccessModifier>
+        </Access.Order>
+      </Access>
+    </Entry.SortBy>
+  </Entry>
+
+  <Entry DisplayName="Constructors and finalizers">
+    <Entry.Match>
+      <Or>
+        <Kind Is="Constructor"/>
+        <Kind Is="Destructor"/>
+      </Or>
+    </Entry.Match>
+    <Entry.SortBy>
+      <Access>
+        <Access.Order>
+          <AccessModifier>Public</AccessModifier>
+          <AccessModifier>Internal</AccessModifier>
+          <AccessModifier>ProtectedInternal</AccessModifier>
+          <AccessModifier>Protected</AccessModifier>
+          <AccessModifier>Private</AccessModifier>
+        </Access.Order>
+      </Access>
+    </Entry.SortBy>
+  </Entry>
+
+  <Entry DisplayName="Methods">
+    <Entry.Match>
+      <Or>
+        <Kind Is="Constructor"/>
+        <Kind Is="Destructor"/>
+      </Or>
+    </Entry.Match>
+    <Entry.SortBy>
+      <Access>
+        <Access.Order>
+          <AccessModifier>Public</AccessModifier>
+          <AccessModifier>Internal</AccessModifier>
+          <AccessModifier>ProtectedInternal</AccessModifier>
+          <AccessModifier>Protected</AccessModifier>
+          <AccessModifier>Private</AccessModifier>
+        </Access.Order>
+      </Access>
+    </Entry.SortBy>
+  </Entry>
+
+  <Entry DisplayName="All other members" />
+
+  <Entry DisplayName="Nested Types">
+    <Entry.Match>
+      <Kind Is="Type" />
+    </Entry.Match>
+  </Entry>
+</TypePattern>
