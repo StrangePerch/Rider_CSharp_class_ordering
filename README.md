@@ -1,6 +1,6 @@
-#XML pattern for class members rearrangement for Rider
+# XML pattern for class members rearrangement for Rider
 ___
->###Class member ordering
+>### Class member ordering
 >+ Group class members in the following order:
 >  + Nested classes, enums, delegates and events.
 >  + Static, const and readonly fields.
@@ -15,5 +15,5 @@ ___
 >  + Private.
 >> https://google.github.io/styleguide/csharp-style.html
 ___
-##Configure
+## Configure
 You can configure this using ```Preferences | Editor | Code Style | C# -> File Layout```
